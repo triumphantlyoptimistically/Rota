@@ -13,13 +13,18 @@ This project demonstrates object-oriented programming principles for managing em
 - **Available Employee Lookup:** Find all eligible employees for a specific shift.
 
 ## Example Usage
-// Create employee with availability 
+Create employee with availability 
+
 var availability = new List<Employee.Availability> { new Employee.Availability(DayOfWeek.Monday, new TimeSpan(9, 0, 0), new TimeSpan(17, 0, 0)) }; var employee = new Employee(1, "John Smith", "Cashier", availability);
 
-// Create a shift 
+
+Create a shift 
+
 var shift = new Shift(1, "Cashier", new DateTime(2026, 2, 9, 10, 0, 0), new DateTime(2026, 2, 9, 14, 0, 0));
 
-// Create scheduler and assign employee 
+
+Create scheduler and assign employee 
+
 var scheduler = new Scheduler(employees, shifts); bool assigned = scheduler.AssignEmployee(employee, shift);#
 
 ## Project Structure
